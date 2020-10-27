@@ -1,6 +1,6 @@
 pragma solidity 0.6.6;
 
-contract AmericanInstituteOfMonterrey {
+contract SmartCertification {
     uint public certificate_counter;
 
     // Structs
