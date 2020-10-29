@@ -5,9 +5,10 @@ contract Identity{
         
         // There are three different data locations:
         
-        //storage: everything that is saved permanently, like the mapping and state variables.
-        //including the owner variable and the mapping data. They will all live as long as the contract remains.
-        // For example, the people[creator] mapping is always in storage.
+        //storage: everything that is saved permanently, like state and some local variables: 
+        // mapping, structs, and arrays.
+        //In our HelloWorld contract, the owner variable and the mapping data people[creator] are examples. 
+        // They will all be in storage and live as long as the contract remains.
         
         //memory: It is saved only during a function execution, like the function input "string memory name".
         //this means the name will be kept and saved throughout the function execution,
@@ -25,7 +26,7 @@ contract Identity{
         //are lower than 256 bits in size. The variables gets deleted here as well when the function is executed.
         //when it comes to the function arguments, 
         //they are always defauled to memory and you don't need to specify the data locations for them.
-        // unlike strings, structs and arrays where you need to specify their data locations.
+        // unlike strings, where you need to specify their data locations.
         //This explains why we don't type memory when we set them within the function.
         
     
