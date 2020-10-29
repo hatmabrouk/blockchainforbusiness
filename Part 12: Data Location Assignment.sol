@@ -10,8 +10,6 @@ contract MemoryAndStorage {
 
     function addUser(uint id, uint balance) public {
         users[id] = User(id, balance);
-        //whether you choose id or balance within the users mapping the result and values are the same.
-        //we probably prioritized the id because under the getBalance function, you get the balance using the id.
     }
 
     function updateBalance(uint id, uint balance) public {
