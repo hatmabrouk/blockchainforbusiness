@@ -15,6 +15,7 @@ contract MemoryAndStorage {
     function updateBalance(uint id, uint balance) public {
      users[id].balance = balance;
     }
+        
         // a user (with small u) is new information. It is defined by referring to the User struct saved in the storage.
         // Thus, it consists of an id and a balance. Therefore, the user id and balance must be explained. 
         // This user is going to have an id within the users mapping. so no changes to the id.
@@ -31,10 +32,12 @@ contract MemoryAndStorage {
         // to be a direct pointer to the User that is in the mapping value.
         
         // Another way to solve the problem is to have users[id].balance = balance. 
+        // In here, You are not creating new information that makes reference to other saved information.
         // In here, you are not storing the id of the mapping users in a variable that needs reference.
-        // same like before when we did people[creator] = newPerson;
+        // same like in previous smart contracts, when we did people[creator] = newPerson;
         // That is the same thing as the first solution, but accomplished in one line.
         // This is because the mapping users is added to storage automatically, so there is no need to mention 
+        // any storage. You will be able in this case to direct and change the balance in the mapping itself.
         
     function getBalance(uint id) view public returns (uint) {
         return users[id].balance;
