@@ -23,8 +23,8 @@ pragma solidity 0.6.6;
     instance.createPerson{value:msg.value} (name, age, height);    
         // the quick normal thing to do is usually instance.createPerson (name, age, height); but we also need
         // to forward the actual Ether that we got from "externalCreatePerson" into this function "instance.createPerson", 
-        // so we need to have a ".value" and in order to attach some Ether to this function call, we will attach 
-        // (msg.value) at the end. At this point, you can provide the arguments (name, age, height). 
-        // This means you will have two function calls between ().
+        // so we need to have a "value" and in order to attach some Ether to this function call, we will attach 
+        // :msg.value at the end. At this point, you can provide the arguments (name, age, height). 
+        // This means you will have two function calls between {} and ().
     }
 }
